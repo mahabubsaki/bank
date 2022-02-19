@@ -12,11 +12,11 @@ const updateDepositeAndWithdraw = (id,input,operator) =>{
 const previous = getInnerTextNumber(id)
 let given = getValueNumber(input)
 let updated = previous + given
-if((updated >= 0 && updated != NaN) && (operator == true)){
+if((given >= 0 && updated != NaN) && (operator == true)){
         document.getElementById('deposite').innerText = updated
         document.getElementById('deposite-input').value =''
 }
-else if((updated >= 0 && updated != NaN) && (operator == false)){
+else if((given >= 0 && updated != NaN) && (operator == false)){
     const balanceNumber = getInnerTextNumber('balance')
     if (given <= balanceNumber){
     document.getElementById('withdraw').innerText = updated
